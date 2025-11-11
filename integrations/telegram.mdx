@@ -1,0 +1,360 @@
+---
+title: "Telegram Integration"
+description: "Connect via Telegram for cross-platform messaging with your assistant"
+---
+
+Telegram provides a powerful, cross-platform way to communicate with your Hyperaide assistant. Available on all devices with advanced features like inline commands and rich media support.
+
+## Why Use Telegram?
+
+<CardGroup cols={2}>
+  <Card title="Cross-Platform" icon="laptop-mobile">
+    Available on desktop, mobile, and web with perfect sync
+  </Card>
+  
+  <Card title="Fast & Reliable" icon="bolt">
+    Cloud-based infrastructure for instant message delivery
+  </Card>
+  
+  <Card title="Rich Features" icon="sparkles">
+    Inline keyboards, commands, and bot capabilities
+  </Card>
+  
+  <Card title="Privacy Focused" icon="shield">
+    Strong encryption and privacy controls
+  </Card>
+</CardGroup>
+
+## Setting Up Telegram
+
+<Steps>
+  <Step title="Open Web App">
+    Navigate to **Settings → Integrations** in Hyperaide
+  </Step>
+  
+  <Step title="Select Telegram">
+    Find and click the **Telegram** integration card
+  </Step>
+  
+  <Step title="Start Chat">
+    Click **Connect to Telegram** - this opens a Telegram chat with your assistant bot
+  </Step>
+  
+  <Step title="Send /start">
+    Send `/start` in the Telegram chat to activate your assistant
+  </Step>
+  
+  <Step title="Confirm Connection">
+    Your assistant sends a welcome message confirming the connection
+  </Step>
+</Steps>
+
+<Tip>
+  Add your assistant bot to your Telegram favorites for quick access from any device.
+</Tip>
+
+## Using Telegram Commands
+
+Telegram supports special bot commands for quick actions:
+
+<Tabs>
+  <Tab title="Basic Commands">
+    ```text
+    /start - Activate your assistant
+    /help - Show available commands
+    /today - Show today's tasks and schedule
+    /tomorrow - Show tomorrow's agenda
+    /tasks - List all active tasks
+    /done - Mark the last mentioned task complete
+    ```
+  </Tab>
+  
+  <Tab title="Quick Actions">
+    ```text
+    /add [task] - Quickly add a task
+    /remind [time] [message] - Set a reminder
+    /note [content] - Create a quick note
+    /search [query] - Search across all your data
+    ```
+  </Tab>
+  
+  <Tab title="Information">
+    ```text
+    /status - Show assistant status and stats
+    /integrations - List connected integrations
+    /help [topic] - Get help on specific features
+    /settings - Adjust Telegram-specific settings
+    ```
+  </Tab>
+</Tabs>
+
+<Info>
+  You can also use natural language without commands—your assistant understands both styles!
+</Info>
+
+## Telegram-Specific Features
+
+<AccordionGroup>
+  <Accordion title="Inline Keyboards" icon="keyboard">
+    Your assistant can show interactive buttons for quick actions:
+    
+    ```text
+    You: "Show my tasks"
+    Assistant: [Displays tasks with buttons]
+    • ✅ Complete
+    • ⏰ Snooze
+    • ✏️ Edit
+    • 🗑️ Delete
+    ```
+    
+    Tap buttons instead of typing commands.
+  </Accordion>
+  
+  <Accordion title="Rich Formatting" icon="text">
+    Telegram supports advanced text formatting:
+    
+    - **Bold** for emphasis
+    - *Italic* for secondary info
+    - `Code` for technical content
+    - [Links](https://example.com) for references
+    - • Bullet lists
+    - Numbered lists
+    - Blockquotes for notes
+  </Accordion>
+  
+  <Accordion title="File Sharing" icon="file">
+    Share any file type with your assistant:
+    
+    - Documents (PDF, DOCX, etc.)
+    - Images and screenshots
+    - Voice messages
+    - Videos
+    - Spreadsheets
+    
+    Your assistant can extract text, summarize content, and save references.
+  </Accordion>
+  
+  <Accordion title="Voice Messages" icon="microphone">
+    Send voice notes for hands-free interaction:
+    
+    1. Tap and hold the microphone
+    2. Speak your message
+    3. Release to send
+    4. Your assistant transcribes and responds
+    
+    Voice messages work even on desktop Telegram!
+  </Accordion>
+</AccordionGroup>
+
+## Cross-Platform Benefits
+
+<Tabs>
+  <Tab title="Desktop">
+    **Telegram Desktop**
+    
+    - Full keyboard shortcuts
+    - Multi-window support
+    - Fast typing for complex requests
+    - Easy copy-paste from other apps
+    - Screen sharing (for troubleshooting)
+    
+    Perfect for deep work sessions.
+  </Tab>
+  
+  <Tab title="Mobile">
+    **Telegram Mobile**
+    
+    - Quick access on the go
+    - Voice message support
+    - Camera integration for photos
+    - Location sharing
+    - Push notifications
+    
+    Ideal for capturing thoughts anywhere.
+  </Tab>
+  
+  <Tab title="Web">
+    **Telegram Web**
+    
+    - No installation needed
+    - Works in any browser
+    - Sync with mobile and desktop
+    - Quick access from any computer
+    
+    Great for temporary workstations.
+  </Tab>
+</Tabs>
+
+## Automation & Bots
+
+<AccordionGroup>
+  <Accordion title="Scheduled Messages" icon="clock">
+    Your assistant can send scheduled updates via Telegram:
+    
+    ```text
+    Future Action: "Every morning at 7am, 
+    send my daily agenda to Telegram"
+    ```
+    
+    Proactive notifications wherever you are.
+  </Accordion>
+  
+  <Accordion title="Custom Commands" icon="code">
+    Create personal shortcuts:
+    
+    ```text
+    You: "When I say /standup, show today's tasks and yesterday's completions"
+    Assistant: "✓ Custom command /standup created"
+    
+    Later:
+    You: "/standup"
+    Assistant: [Shows formatted standup info]
+    ```
+  </Accordion>
+  
+  <Accordion title="Group Integration" icon="users">
+    Add your assistant to Telegram groups:
+    
+    - Team coordination
+    - Shared task management
+    - Meeting notes capture
+    - Group reminders
+    
+    Your assistant works in personal and group chats!
+  </Accordion>
+</AccordionGroup>
+
+## Privacy & Security
+
+<AccordionGroup>
+  <Accordion title="Encryption" icon="lock">
+    - All Telegram messages use cloud encryption
+    - Optional secret chats with end-to-end encryption
+    - Hyperaide processes messages securely
+    - Messages never shared with third parties
+  </Accordion>
+  
+  <Accordion title="Bot Permissions" icon="shield-check">
+    Your assistant bot can:
+    - Read messages you send
+    - Send messages back to you
+    - Access files you share
+    
+    Your assistant bot cannot:
+    - See other Telegram chats
+    - Contact other users
+    - Access your Telegram account
+  </Accordion>
+  
+  <Accordion title="Data Storage" icon="database">
+    - Message history stored for context
+    - Files temporarily cached during processing
+    - Voice notes transcribed then audio deleted
+    - You can delete your data anytime
+  </Accordion>
+</AccordionGroup>
+
+## Telegram vs WhatsApp
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Telegram</th>
+      <th>WhatsApp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cross-platform</td>
+      <td>✅ Excellent (all platforms)</td>
+      <td>⚠️ Good (limited desktop)</td>
+    </tr>
+    <tr>
+      <td>Bot commands</td>
+      <td>✅ Native support</td>
+      <td>❌ Not supported</td>
+    </tr>
+    <tr>
+      <td>File size limit</td>
+      <td>✅ 2GB</td>
+      <td>⚠️ 100MB</td>
+    </tr>
+    <tr>
+      <td>Voice on desktop</td>
+      <td>✅ Yes</td>
+      <td>❌ No</td>
+    </tr>
+    <tr>
+      <td>Inline keyboards</td>
+      <td>✅ Yes</td>
+      <td>❌ Limited</td>
+    </tr>
+    <tr>
+      <td>Popularity</td>
+      <td>⚠️ Popular globally</td>
+      <td>✅ Most popular</td>
+    </tr>
+  </tbody>
+</table>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Bot Not Responding" icon="robot">
+    **Solutions:**
+    1. Send `/start` to reactivate
+    2. Check integration status in web app
+    3. Try sending from a different device
+    4. Reconnect the integration
+  </Accordion>
+  
+  <Accordion title="Commands Not Working" icon="slash">
+    **Solutions:**
+    1. Ensure commands start with `/`
+    2. Check spelling (commands are case-sensitive)
+    3. Try the natural language equivalent
+    4. Send `/help` to see available commands
+  </Accordion>
+  
+  <Accordion title="Voice Notes Not Transcribing" icon="microphone-slash">
+    **Solutions:**
+    1. Ensure voice note is clear
+    2. Check language settings match your speech
+    3. Try shorter voice notes (under 2 minutes)
+    4. Send as text if transcription fails repeatedly
+  </Accordion>
+</AccordionGroup>
+
+## Tips & Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Use Commands for Speed" icon="bolt">
+    Commands like `/today` and `/tasks` are faster than typing full requests
+  </Card>
+  
+  <Card title="Desktop for Complex Work" icon="desktop">
+    Use Telegram Desktop for detailed conversations and copy-pasting data
+  </Card>
+  
+  <Card title="Mobile for Quick Capture" icon="mobile">
+    Use Telegram mobile for voice notes and photos on the go
+  </Card>
+  
+  <Card title="Pin Important Chats" icon="thumbtack">
+    Pin your assistant bot for instant access in Telegram
+  </Card>
+  
+  <Card title="Customize Notifications" icon="bell">
+    Set custom notification sounds for your assistant to distinguish from other chats
+  </Card>
+  
+  <Card title="Use Inline Buttons" icon="hand-pointer">
+    Tap interactive buttons instead of typing—faster and more accurate
+  </Card>
+</CardGroup>
+
+<Note>
+  Telegram is perfect if you want a feature-rich, cross-platform experience with your assistant. It's especially powerful for power users who want commands, automation, and desktop integration.
+</Note>
+

@@ -1,0 +1,392 @@
+---
+title: "Google Calendar Integration"
+description: "Manage your schedule and events with natural language"
+---
+
+Connect Google Calendar to let your Hyperaide assistant manage your schedule, check availability, and coordinate your time across all your commitments.
+
+## Why Connect Google Calendar?
+
+<CardGroup cols={2}>
+  <Card title="Natural Scheduling" icon="calendar-plus">
+    Add events using conversational language instead of forms
+  </Card>
+  
+  <Card title="Smart Availability" icon="clock">
+    Your assistant knows your schedule and can find free time
+  </Card>
+  
+  <Card title="Proactive Reminders" icon="bell">
+    Get contextual reminders about upcoming events
+  </Card>
+  
+  <Card title="Task Coordination" icon="diagram-project">
+    Coordinate tasks and calendar events intelligently
+  </Card>
+</CardGroup>
+
+## Setting Up Google Calendar
+
+<Steps>
+  <Step title="Navigate to Integrations">
+    Go to **Settings → Integrations** in Hyperaide
+  </Step>
+  
+  <Step title="Select Google Calendar">
+    Click the **Google Calendar** integration card
+  </Step>
+  
+  <Step title="Sign in with Google">
+    Click **Connect** and sign in to your Google account
+  </Step>
+  
+  <Step title="Grant Permissions">
+    Authorize Hyperaide to read and manage your calendar events
+  </Step>
+  
+  <Step title="Choose Calendars">
+    Select which calendars to sync (Work, Personal, etc.)
+  </Step>
+  
+  <Step title="Start Scheduling">
+    Your assistant can now manage your Google Calendar!
+  </Step>
+</Steps>
+
+<Tip>
+  You can connect multiple Google accounts if you manage separate personal and work calendars.
+</Tip>
+
+## What Your Assistant Can Do
+
+<Tabs>
+  <Tab title="Create Events">
+    Schedule events naturally:
+    
+    ```text
+    "Schedule a team meeting tomorrow at 2pm for 1 hour"
+    "Add a dentist appointment next Tuesday at 10am"
+    "Block 3 hours tomorrow afternoon for deep work"
+    "Create a recurring weekly standup every Monday at 9am"
+    "Schedule lunch with Sarah on Friday at noon"
+    ```
+    
+    Your assistant:
+    - Parses natural dates and times
+    - Sets appropriate durations
+    - Creates recurring events
+    - Handles time zones automatically
+  </Tab>
+  
+  <Tab title="Check Schedule">
+    Query your calendar:
+    
+    ```text
+    "What's on my calendar today?"
+    "Show me this week's meetings"
+    "Am I free tomorrow afternoon?"
+    "What time is my next meeting?"
+    "Show me all events with John this month"
+    "List my meetings for next week"
+    ```
+    
+    Your assistant provides:
+    - Event titles and times
+    - Attendees and locations
+    - Meeting links
+    - Conflicts and gaps
+  </Tab>
+  
+  <Tab title="Find Availability">
+    Smart scheduling assistance:
+    
+    ```text
+    "When am I free tomorrow?"
+    "Find a 2-hour block this week for project work"
+    "What's my first available slot next week?"
+    "When can I schedule a 30-minute meeting?"
+    "Show me my free time on Thursday"
+    ```
+    
+    Your assistant analyzes your calendar and suggests optimal times.
+  </Tab>
+  
+  <Tab title="Modify Events">
+    Update existing events:
+    
+    ```text
+    "Move my 3pm meeting to 4pm"
+    "Reschedule tomorrow's dentist appointment to next week"
+    "Add Sarah to the team meeting"
+    "Change the marketing review to 2 hours"
+    "Cancel my Friday afternoon meeting"
+    ```
+    
+    Changes sync to Google Calendar instantly.
+  </Tab>
+  
+  <Tab title="Prepare for Meetings">
+    Get meeting context:
+    
+    ```text
+    "What's my next meeting about?"
+    "Prepare me for the 2pm client call"
+    "Who's attending the standup?"
+    "Where is my 3pm meeting?"
+    "What meetings do I have before lunch?"
+    ```
+    
+    Your assistant provides all relevant details.
+  </Tab>
+</Tabs>
+
+## Smart Scheduling Features
+
+<AccordionGroup>
+  <Accordion title="Natural Date/Time Parsing" icon="language">
+    Your assistant understands flexible date expressions:
+    
+    - "tomorrow at 2pm"
+    - "next Friday afternoon"
+    - "first Monday of next month"
+    - "in 3 hours"
+    - "end of this week"
+    - "next Tuesday morning"
+    
+    No need for specific date formats!
+  </Accordion>
+  
+  <Accordion title="Duration Intelligence" icon="hourglass">
+    Your assistant infers appropriate durations:
+    
+    ```text
+    "Schedule a quick sync" → 15-30 minutes
+    "Block time for deep work" → 2-3 hours
+    "Add a standup" → 15 minutes
+    "Schedule a client meeting" → 1 hour
+    ```
+    
+    Or specify explicitly: "2-hour meeting"
+  </Accordion>
+  
+  <Accordion title="Conflict Detection" icon="triangle-exclamation">
+    Your assistant warns about scheduling conflicts:
+    
+    ```text
+    You: "Schedule a meeting tomorrow at 2pm"
+    Assistant: "⚠️ You already have 'Budget Review' at 2pm. 
+                Would you like to find another time?"
+    ```
+    
+    Prevents double-booking automatically.
+  </Accordion>
+  
+  <Accordion title="Time Zone Handling" icon="globe">
+    Your assistant manages time zones seamlessly:
+    
+    - Displays times in your local timezone
+    - Handles events with participants in other zones
+    - Converts "9am PT" to your timezone
+    - Respects Google Calendar timezone settings
+  </Accordion>
+</AccordionGroup>
+
+## Calendar + Tasks Integration
+
+Coordinate your time and tasks intelligently:
+
+<Tabs>
+  <Tab title="Time-Aware Tasks">
+    ```text
+    "What tasks are due before my next meeting?"
+    "Schedule time to work on the presentation task"
+    "Show tasks I can do in the next 2 hours"
+    "Find time this week for all my high priority tasks"
+    ```
+    
+    Your assistant considers both calendar and tasks when planning.
+  </Tab>
+  
+  <Tab title="Meeting Preparation">
+    ```text
+    "Before each client meeting, remind me to review 
+     their profile and recent interactions"
+    
+    "30 minutes before meetings, show me related tasks and notes"
+    ```
+    
+    Automated meeting prep reminders.
+  </Tab>
+  
+  <Tab title="Time Blocking">
+    ```text
+    "Block 2 hours every morning for my top priority tasks"
+    "Schedule 30 minutes after each meeting for notes"
+    "Find time this week for all unscheduled tasks"
+    ```
+    
+    Proactive time management.
+  </Tab>
+  
+  <Tab title="Post-Meeting Actions">
+    ```text
+    "After meetings, ask me if there are any follow-up tasks"
+    "When a meeting ends, create tasks from any action items"
+    ```
+    
+    Capture action items automatically.
+  </Tab>
+</Tabs>
+
+## Automation Examples
+
+<Tabs>
+  <Tab title="Morning Briefing">
+    ```text
+    Future Action: Every weekday at 7am
+    
+    "Send me today's schedule:
+    - All meetings with times and attendees
+    - Travel time between meetings
+    - Free blocks for focused work
+    - Suggested priorities based on available time"
+    ```
+  </Tab>
+  
+  <Tab title="Meeting Prep">
+    ```text
+    Future Action: 15 minutes before each meeting
+    
+    "Send meeting prep:
+    - Meeting title and agenda
+    - Attendees and their roles
+    - Related tasks and notes
+    - Quick briefing on context"
+    ```
+  </Tab>
+  
+  <Tab title="Weekly Planning">
+    ```text
+    Future Action: Every Sunday at 6pm
+    
+    "Show next week's calendar and help me:
+    - Identify gaps for deep work
+    - Flag any conflicts or issues
+    - Suggest optimal times for priorities
+    - Balance meeting load across days"
+    ```
+  </Tab>
+  
+  <Tab title="End of Day">
+    ```text
+    Future Action: Every weekday at 5:30pm
+    
+    "Review today:
+    - What meetings did I have?
+    - What got accomplished?
+    - What's scheduled for tomorrow?
+    - Any prep needed for tomorrow's meetings?"
+    ```
+  </Tab>
+</Tabs>
+
+## Permissions & Privacy
+
+<AccordionGroup>
+  <Accordion title="What Hyperaide Can Access" icon="eye">
+    - Read all events from selected calendars
+    - View event details (title, time, attendees, location)
+    - See free/busy status
+    - Access calendar metadata
+  </Accordion>
+  
+  <Accordion title="What Hyperaide Can Do" icon="pen">
+    - Create new events
+    - Modify existing events
+    - Delete events (when you request)
+    - Accept/decline invitations
+    
+    Only when you explicitly instruct it.
+  </Accordion>
+  
+  <Accordion title="What Hyperaide Cannot Do" icon="shield-xmark">
+    - Access calendars you didn't select
+    - See Google account settings
+    - Modify calendar sharing permissions
+    - Access other Google services
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Google Calendar integration requires broad permissions to manage events. Only connect if you trust Hyperaide with your schedule.
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Events Not Syncing" icon="arrows-rotate">
+    **Solutions:**
+    1. Check integration status in Settings
+    2. Wait 30-60 seconds for sync
+    3. Verify the calendar is selected for sync
+    4. Try disconnecting and reconnecting
+    5. Check Google Calendar itself is working
+  </Accordion>
+  
+  <Accordion title="Can't Create Events" icon="calendar-xmark">
+    **Solutions:**
+    1. Verify you granted write permissions
+    2. Check you're not trying to edit a shared calendar
+    3. Ensure the calendar isn't read-only
+    4. Reconnect with full permissions
+  </Accordion>
+  
+  <Accordion title="Wrong Time Zone" icon="clock">
+    **Solutions:**
+    1. Check your Google Calendar timezone settings
+    2. Verify Hyperaide account timezone in Settings
+    3. Be explicit: "Schedule at 2pm PT"
+    4. Your assistant uses your account timezone by default
+  </Accordion>
+  
+  <Accordion title="Authorization Expired" icon="key">
+    **Solution:**
+    Google tokens expire for security:
+    1. Go to Settings → Integrations
+    2. Click **Reconnect** next to Google Calendar
+    3. Re-authorize access
+  </Accordion>
+</AccordionGroup>
+
+## Tips & Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Select Relevant Calendars" icon="calendar-check">
+    Only sync calendars you actively manage with Hyperaide to reduce noise
+  </Card>
+  
+  <Card title="Use Natural Language" icon="message">
+    "Schedule lunch with Sarah on Friday" works better than complex date formats
+  </Card>
+  
+  <Card title="Check Availability First" icon="clock-rotate-left">
+    Ask "Am I free tomorrow afternoon?" before scheduling new events
+  </Card>
+  
+  <Card title="Set Up Morning Briefings" icon="sunrise">
+    Automate daily schedule summaries so you start each day informed
+  </Card>
+  
+  <Card title="Block Focus Time" icon="ban">
+    Schedule recurring blocks for deep work to protect your productive time
+  </Card>
+  
+  <Card title="Link to Tasks" icon="link">
+    Connect calendar events to tasks in Hyperaide for complete context
+  </Card>
+</CardGroup>
+
+<Note>
+  Google Calendar integration transforms your assistant into a personal scheduler who knows your availability, manages your time, and ensures you're always prepared for what's next. It's essential for anyone with a busy calendar!
+</Note>
+

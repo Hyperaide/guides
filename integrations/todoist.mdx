@@ -1,0 +1,416 @@
+---
+title: "Todoist Integration"
+description: "Sync your Todoist tasks with Hyperaide for unified task management"
+---
+
+Connect Todoist with Hyperaide to manage your tasks from anywhere using natural language. Your assistant can create, update, and complete Todoist tasks alongside your Hyperaide databases.
+
+## Why Connect Todoist?
+
+<CardGroup cols={2}>
+  <Card title="Unified Task Management" icon="list-check">
+    Manage Todoist tasks alongside your other tasks and projects in Hyperaide
+  </Card>
+  
+  <Card title="Natural Language" icon="message">
+    Use conversational commands instead of learning Todoist syntax
+  </Card>
+  
+  <Card title="Cross-Platform Sync" icon="arrows-rotate">
+    Changes sync instantly between Todoist, Hyperaide, and all your devices
+  </Card>
+  
+  <Card title="Smart Automation" icon="wand-sparkles">
+    Create Future Actions that work with your Todoist tasks
+  </Card>
+</CardGroup>
+
+## Setting Up Todoist
+
+<Steps>
+  <Step title="Navigate to Integrations">
+    Go to **Settings → Integrations** in the Hyperaide web app
+  </Step>
+  
+  <Step title="Select Todoist">
+    Find and click the **Todoist** integration card
+  </Step>
+  
+  <Step title="Authorize Access">
+    Click **Connect** and log in to your Todoist account
+  </Step>
+  
+  <Step title="Grant Permissions">
+    Authorize Hyperaide to read and manage your Todoist tasks
+  </Step>
+  
+  <Step title="Start Using">
+    Your assistant can now access your Todoist tasks!
+  </Step>
+</Steps>
+
+<Info>
+  Hyperaide requests read and write access to your Todoist tasks. We never delete tasks without your explicit instruction.
+</Info>
+
+## What Your Assistant Can Do
+
+<Tabs>
+  <Tab title="Create Tasks">
+    Add tasks to Todoist using natural language:
+    
+    ```text
+    "Create a Todoist task to review the budget by Friday"
+    "Add to my Todoist: Call the dentist tomorrow at 2pm"
+    "New Todoist task in the Work project: Finish presentation"
+    "Add a high priority task to buy groceries"
+    ```
+    
+    Your assistant automatically:
+    - Parses dates ("tomorrow", "Friday", "in 3 days")
+    - Detects projects and labels
+    - Sets priority levels
+    - Adds to the correct project
+  </Tab>
+  
+  <Tab title="View Tasks">
+    Query your Todoist tasks naturally:
+    
+    ```text
+    "Show me all my Todoist tasks"
+    "What Todoist tasks are due today?"
+    "List my high priority Todoist tasks"
+    "Show tasks in my Work project"
+    "What's overdue in Todoist?"
+    ```
+    
+    Your assistant displays tasks with:
+    - Task name and description
+    - Due dates and times
+    - Priority levels
+    - Project and labels
+    - Completion status
+  </Tab>
+  
+  <Tab title="Complete Tasks">
+    Mark tasks as complete:
+    
+    ```text
+    "Complete the Todoist task about the budget review"
+    "Mark the first three Todoist tasks as done"
+    "I finished calling the dentist"
+    "Complete all Todoist tasks due today"
+    ```
+    
+    Your assistant finds the right task and marks it complete in Todoist.
+  </Tab>
+  
+  <Tab title="Update Tasks">
+    Modify existing tasks:
+    
+    ```text
+    "Move the budget review task to next Monday"
+    "Change the priority of the presentation task to high"
+    "Update the dentist task description to include insurance card"
+    "Move the task to the Personal project"
+    ```
+    
+    Your assistant updates tasks in Todoist immediately.
+  </Tab>
+  
+  <Tab title="Manage Projects">
+    Work with Todoist projects:
+    
+    ```text
+    "What projects do I have in Todoist?"
+    "Show all tasks in the Marketing project"
+    "How many tasks are in my Work project?"
+    "List tasks from the Q1 Goals project"
+    ```
+    
+    Your assistant understands your project structure.
+  </Tab>
+</Tabs>
+
+## Smart Features
+
+<AccordionGroup>
+  <Accordion title="Unified Task View" icon="grid">
+    See tasks from Todoist and Hyperaide databases together:
+    
+    ```text
+    "Show me all my tasks" → Returns tasks from everywhere
+    "What's due this week?" → Includes Todoist and Hyperaide
+    "List high priority tasks" → Unified across platforms
+    ```
+    
+    Your assistant treats Todoist tasks like any other tasks.
+  </Accordion>
+  
+  <Accordion title="Intelligent Date Parsing" icon="calendar">
+    Your assistant understands natural date expressions:
+    
+    ```text
+    "tomorrow" → Next day
+    "next Friday" → Upcoming Friday
+    "in 3 days" → Specific date
+    "end of month" → Last day of current month
+    "next week" → Following Monday
+    ```
+    
+    Dates are automatically formatted for Todoist.
+  </Accordion>
+  
+  <Accordion title="Priority Detection" icon="flag">
+    Mention priority and your assistant sets it:
+    
+    ```text
+    "high priority" → Priority 1 (red)
+    "medium priority" → Priority 2 (orange)
+    "low priority" → Priority 3 (blue)
+    "urgent" → Priority 1
+    ```
+    
+    Or specify explicitly: "Set priority to 2"
+  </Accordion>
+  
+  <Accordion title="Project Assignment" icon="folder">
+    Your assistant intelligently assigns tasks to projects:
+    
+    ```text
+    "Add to Work project" → Explicitly assigns
+    "Create a work task" → Infers Work project
+    "New marketing task" → Finds Marketing project
+    ```
+    
+    Or your assistant asks which project if ambiguous.
+  </Accordion>
+</AccordionGroup>
+
+## Automation Examples
+
+<Tabs>
+  <Tab title="Morning Dashboard">
+    ```text
+    Future Action: Every morning at 7am
+    
+    "Show me:
+    - Today's Todoist tasks
+    - Overdue tasks
+    - This week's high priority items
+    
+    Then suggest what I should focus on first"
+    ```
+    
+    Your assistant analyzes your Todoist tasks and helps prioritize your day.
+  </Tab>
+  
+  <Tab title="Weekly Review">
+    ```text
+    Future Action: Every Sunday at 6pm
+    
+    "Summarize my Todoist week:
+    - What I completed
+    - What's still pending
+    - What's overdue
+    
+    Then help me plan next week"
+    ```
+    
+    Automated weekly reviews keep you on track.
+  </Tab>
+  
+  <Tab title="Deadline Reminders">
+    ```text
+    Future Action: Daily check
+    
+    "Check my Todoist tasks.
+    If any high priority tasks are due tomorrow,
+    send me a reminder with details"
+    ```
+    
+    Never miss an important deadline.
+  </Tab>
+  
+  <Tab title="Project Sync">
+    ```text
+    Future Action: When a project completes in Linear
+    
+    "Find all Todoist tasks tagged with [project name]
+    and create a wrap-up task to review them"
+    ```
+    
+    Cross-platform workflow automation.
+  </Tab>
+</Tabs>
+
+## Todoist + Hyperaide Databases
+
+Combine Todoist with Hyperaide databases for powerful workflows:
+
+<Tabs>
+  <Tab title="Mirror Important Tasks">
+    ```text
+    "When I create a high priority Todoist task,
+    also add it to my Critical Tasks database"
+    ```
+    
+    Keep critical tasks in multiple places for visibility.
+  </Tab>
+  
+  <Tab title="Project Tracking">
+    ```text
+    "Link Todoist tasks to my Projects database
+    so I can see all work for each project in one place"
+    ```
+    
+    Unified project visibility.
+  </Tab>
+  
+  <Tab title="Time Tracking">
+    ```text
+    "When I complete a Todoist task,
+    log it in my Time Tracking database with the project"
+    ```
+    
+    Automatic productivity logging.
+  </Tab>
+  
+  <Tab title="Context Enrichment">
+    ```text
+    "For client-related Todoist tasks,
+    link them to the client in my Contacts database"
+    ```
+    
+    Connect tasks to context automatically.
+  </Tab>
+</Tabs>
+
+## Permissions & Privacy
+
+<AccordionGroup>
+  <Accordion title="What Hyperaide Can Access" icon="eye">
+    - Read all your Todoist tasks
+    - View projects and labels
+    - See task metadata (dates, priorities, etc.)
+    - Access task descriptions and comments
+  </Accordion>
+  
+  <Accordion title="What Hyperaide Can Do" icon="pen">
+    - Create new tasks in any project
+    - Update task details (dates, priorities, descriptions)
+    - Mark tasks as complete
+    - Move tasks between projects
+    
+    Only when you explicitly instruct it to do so.
+  </Accordion>
+  
+  <Accordion title="What Hyperaide Cannot Do" icon="shield-xmark">
+    - Delete tasks (unless you explicitly request it)
+    - Access your Todoist account settings
+    - Share your tasks with anyone else
+    - Modify tasks without your instruction
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Hyperaide has full access to your Todoist account. Only connect if you trust Hyperaide to manage your tasks.
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Tasks Not Syncing" icon="arrows-rotate">
+    **Possible solutions:**
+    1. Check that the integration is connected in Settings
+    2. Wait 30-60 seconds for sync to complete
+    3. Try disconnecting and reconnecting Todoist
+    4. Verify the task exists in Todoist
+    5. Check for any Todoist service outages
+  </Accordion>
+  
+  <Accordion title="Can't Find Task" icon="magnifying-glass">
+    **Possible solutions:**
+    1. Try searching with different keywords
+    2. Check if the task is in a different project
+    3. Verify the task isn't completed or deleted
+    4. Ask "Show all my Todoist tasks" to see everything
+  </Accordion>
+  
+  <Accordion title="Authorization Expired" icon="key">
+    **Solution:**
+    Todoist tokens can expire for security:
+    
+    1. Go to Settings → Integrations
+    2. Find Todoist and click **Reconnect**
+    3. Re-authorize access
+    4. Your integration resumes working
+  </Accordion>
+  
+  <Accordion title="Wrong Project Assignment" icon="folder-xmark">
+    **Solutions:**
+    1. Be more explicit: "Add to the Work project"
+    2. Use exact project names from Todoist
+    3. Your assistant will ask if ambiguous
+    4. You can move tasks after creation
+  </Accordion>
+</AccordionGroup>
+
+## Tips & Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye">
+    Say "Todoist" when you want to create tasks there specifically, otherwise your assistant may choose
+  </Card>
+  
+  <Card title="Use Projects" icon="folders">
+    Organize with Todoist projects—your assistant understands and respects your structure
+  </Card>
+  
+  <Card title="Leverage Labels" icon="tags">
+    Use Todoist labels and mention them when creating tasks for better organization
+  </Card>
+  
+  <Card title="Natural Dates" icon="calendar-days">
+    Use natural language for dates—"tomorrow", "next Friday", "in 3 days"—your assistant handles conversion
+  </Card>
+  
+  <Card title="Batch Operations" icon="layer-group">
+    Update multiple tasks at once: "Mark all today's Todoist tasks as complete"
+  </Card>
+  
+  <Card title="Cross-Reference" icon="link">
+    Link Todoist tasks to Hyperaide databases for enriched context
+  </Card>
+</CardGroup>
+
+## Disconnecting Todoist
+
+To disconnect Todoist from Hyperaide:
+
+<Steps>
+  <Step title="Open Settings">
+    Navigate to **Settings → Integrations**
+  </Step>
+  
+  <Step title="Find Todoist">
+    Locate your Todoist integration
+  </Step>
+  
+  <Step title="Disconnect">
+    Click **Disconnect** and confirm
+  </Step>
+  
+  <Step title="Revoke Access (Optional)">
+    Visit Todoist settings to fully revoke Hyperaide's access
+  </Step>
+</Steps>
+
+<Info>
+  Disconnecting doesn't delete your Todoist tasks—it only removes Hyperaide's ability to access them. Your tasks remain safe in Todoist.
+</Info>
+
+<Note>
+  Todoist + Hyperaide is perfect if you're already a Todoist user but want natural language control and cross-platform automation. Connect it and you'll never need to open Todoist manually again!
+</Note>
+

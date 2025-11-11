@@ -1,0 +1,292 @@
+---
+title: 'POST /instruct'
+description: 'Send an instruction to your assistant for execution'
+---
+
+## Overview
+
+The `/instruct` endpoint allows you to send instructions to your Hyperaide assistant programmatically. Your assistant will process the instruction and take appropriate actions, just as if you had messaged it directly.
+
+<Info>
+  Use this endpoint when you want your assistant to actively respond and take actions based on your instruction.
+</Info>
+
+## Endpoint
+
+```
+POST https://api.hyperaide.com/instruct
+```
+
+## Authentication
+
+Include your API key in the request headers:
+
+```bash
+x-api-key: your_api_key_here
+```
+
+## Request Body
+
+<ParamField body="content" type="string" required>
+  The instruction you want to send to your assistant. Can be any natural language instruction.
+  
+  **Example:** `"Create a task to review the Q4 budget by Friday"`
+</ParamField>
+
+## Request Example
+
+<CodeGroup>
+
+```bash cURL
+curl -X POST https://api.hyperaide.com/instruct \
+  -H "x-api-key: your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "content": "Create a task to review the Q4 budget by Friday"
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.hyperaide.com/instruct', {
+  method: 'POST',
+  headers: {
+    'x-api-key': 'your_api_key_here',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    content: 'Create a task to review the Q4 budget by Friday'
+  })
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    'https://api.hyperaide.com/instruct',
+    headers={
+        'x-api-key': 'your_api_key_here',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'content': 'Create a task to review the Q4 budget by Friday'
+    }
+)
+
+print(response.json())
+```
+
+```go Go
+package main
+
+import (
+    "bytes"
+    "encoding/json"
+    "net/http"
+)
+
+func main() {
+    payload := map[string]string{
+        "content": "Create a task to review the Q4 budget by Friday",
+    }
+    
+    jsonData, _ := json.Marshal(payload)
+    
+    req, _ := http.NewRequest("POST", "https://api.hyperaide.com/instruct", bytes.NewBuffer(jsonData))
+    req.Header.Set("x-api-key", "your_api_key_here")
+    req.Header.Set("Content-Type", "application/json")
+    
+    client := &http.Client{}
+    resp, _ := client.Do(req)
+    defer resp.Body.Close()
+}
+```
+
+</CodeGroup>
+
+## Response
+
+### Success Response (200 OK)
+
+```json
+{
+  "message": "Hyperaide instructed"
+}
+```
+
+The instruction has been queued and your assistant will process it asynchronously. Your assistant will execute the instruction and any resulting actions (creating tasks, sending messages, updating databases, etc.) will happen in the background.
+
+<Note>
+  The API returns immediately after queuing the instruction. Your assistant processes it asynchronously and will perform actions based on your instruction.
+</Note>
+
+### Error Responses
+
+<Accordion title="401 Unauthorized">
+  **Missing or invalid API key**
+
+  ```json
+  {
+    "error": "Invalid API key"
+  }
+  ```
+
+  Verify your API key is correct and included in the `x-api-key` header.
+</Accordion>
+
+<Accordion title="400 Bad Request">
+  **Missing or invalid parameters**
+
+  ```json
+  {
+    "error": "Instruction is required"
+  }
+  ```
+
+  Ensure you're sending the `content` field in the request body.
+</Accordion>
+
+<Accordion title="404 Not Found">
+  **User not found**
+
+  ```json
+  {
+    "error": "User not found"
+  }
+  ```
+
+  The API key is valid but the associated user doesn't exist. Contact support.
+</Accordion>
+
+<Accordion title="500 Internal Server Error">
+  **Server error**
+
+  ```json
+  {
+    "error": "An error occurred queuing your request",
+    "message": "Detailed error message"
+  }
+  ```
+
+  Something went wrong on our end. Try again or contact support if the issue persists.
+</Accordion>
+
+## Use Cases
+
+<Tabs>
+  <Tab title="Task Creation">
+    **Automatically create tasks from external systems**
+
+    ```javascript
+    // When a GitHub issue is created
+    await fetch('https://api.hyperaide.com/instruct', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `Create a task to review GitHub issue #${issue.number}: ${issue.title}`
+      })
+    });
+    ```
+  </Tab>
+  
+  <Tab title="Workflow Automation">
+    **Trigger complex workflows**
+
+    ```javascript
+    // After a successful payment
+    await fetch('https://api.hyperaide.com/instruct', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `A payment of $${amount} was received from ${customerName}. 
+                  Create a task to send a thank you email and update the revenue tracker.`
+      })
+    });
+    ```
+  </Tab>
+  
+  <Tab title="Smart Notifications">
+    **Send contextual notifications**
+
+    ```javascript
+    // Server health check
+    await fetch('https://api.hyperaide.com/instruct', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `Alert: Server CPU usage is at ${cpuUsage}%. Send me a notification via WhatsApp.`
+      })
+    });
+    ```
+  </Tab>
+  
+  <Tab title="Data Processing">
+    **Process and organize data**
+
+    ```javascript
+    // After data export
+    await fetch('https://api.hyperaide.com/instruct', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `I just exported customer data. Create records in my Customer database for: ${JSON.stringify(customers)}`
+      })
+    });
+    ```
+  </Tab>
+</Tabs>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye">
+    Provide clear, detailed instructions just as you would when messaging your assistant directly
+  </Card>
+  
+  <Card title="Include Context" icon="message">
+    Add relevant context in your instruction to help your assistant make better decisions
+  </Card>
+  
+  <Card title="Error Handling" icon="triangle-exclamation">
+    Always check response status codes and implement proper error handling
+  </Card>
+  
+  <Card title="Rate Limiting" icon="gauge-high">
+    Be mindful of rate limits when making multiple requests. Implement exponential backoff if needed.
+  </Card>
+</CardGroup>
+
+## What Happens Next?
+
+After you send an instruction:
+
+1. **Queued**: The instruction is immediately queued for processing
+2. **Processed**: Your assistant analyzes the instruction and determines appropriate actions
+3. **Executed**: Actions are performed (creating tasks, sending messages, updating databases, etc.)
+4. **Notifications**: If configured, you'll receive notifications about the results through your connected channels
+
+<Tip>
+  You can check the results of your instruction by messaging your assistant or checking the web app. Your assistant maintains context of API-triggered instructions just like any other interaction.
+</Tip>
+
+## Related Endpoints
+
+<Card title="POST /inform" icon="info" href="/api-reference/inform">
+  Use this endpoint if you want to provide information without expecting actions
+</Card>
+

@@ -1,0 +1,359 @@
+---
+title: "WhatsApp Integration"
+description: "Connect your assistant to WhatsApp for instant mobile access"
+---
+
+WhatsApp is one of the most popular ways to interact with your Hyperaide assistant. Message your assistant from anywhere, anytime, using the app you already have on your phone.
+
+## Why Use WhatsApp?
+
+<CardGroup cols={2}>
+  <Card title="Always Available" icon="mobile">
+    Your assistant is just a message away, wherever you are
+  </Card>
+  
+  <Card title="Voice Messages" icon="microphone">
+    Send voice notes for hands-free interaction
+  </Card>
+  
+  <Card title="Quick Capture" icon="bolt">
+    Perfect for capturing tasks and ideas on the go
+  </Card>
+  
+  <Card title="Media Sharing" icon="image">
+    Send photos, documents, and screenshots
+  </Card>
+</CardGroup>
+
+## Setting Up WhatsApp
+
+<Steps>
+  <Step title="Open Web App">
+    Navigate to **Settings → Integrations** in the Hyperaide web app
+  </Step>
+  
+  <Step title="Select WhatsApp">
+    Find and click on the **WhatsApp** integration card
+  </Step>
+  
+  <Step title="Get Verification Code">
+    You'll see a 6-digit verification code displayed on screen
+  </Step>
+  
+  <Step title="Send Verification Code">
+    Send this code as a WhatsApp message to the number provided (usually displayed as a QR code or clickable link)
+  </Step>
+  
+  <Step title="Confirm Connection">
+    Your assistant will reply with a confirmation message
+  </Step>
+  
+  <Step title="Save Contact">
+    Save your assistant's number in your contacts for easy access
+  </Step>
+</Steps>
+
+<Tip>
+  **Pro tip**: Save your assistant with a name like "My Assistant" or "Hyperaide" so it's easy to find in WhatsApp.
+</Tip>
+
+## Using WhatsApp with Your Assistant
+
+Once connected, you can message your assistant just like you would any contact:
+
+<Tabs>
+  <Tab title="Text Messages">
+    Send regular text messages for any task:
+    
+    ```text
+    "Add a task to call Mom tomorrow at 3pm"
+    "What's on my schedule today?"
+    "Show me all my high priority tasks"
+    "Create a new project for the website redesign"
+    ```
+    
+    Your assistant responds in seconds with confirmations or requested information.
+  </Tab>
+  
+  <Tab title="Voice Notes">
+    Record and send voice messages:
+    
+    1. Tap and hold the microphone icon
+    2. Speak your message naturally
+    3. Release to send
+    4. Your assistant transcribes and processes your request
+    
+    <Info>
+      Voice notes are perfect for capturing detailed thoughts while driving, walking, or multitasking.
+    </Info>
+  </Tab>
+  
+  <Tab title="Media">
+    Share photos and documents:
+    
+    - **Screenshots**: Share error messages or designs for context
+    - **Photos**: Document things visually
+    - **Documents**: Forward PDFs or files for reference
+    
+    Your assistant can describe images and extract text when relevant.
+  </Tab>
+  
+  <Tab title="Quick Commands">
+    Use shorthand for common actions:
+    
+    ```text
+    "Today" → Shows today's tasks and events
+    "Tomorrow" → Shows tomorrow's schedule
+    "Tasks" → Lists active tasks
+    "Done [task name]" → Marks task complete
+    ```
+    
+    Your assistant learns your patterns over time.
+  </Tab>
+</Tabs>
+
+## WhatsApp-Specific Features
+
+<AccordionGroup>
+  <Accordion title="Message Threading" icon="messages">
+    Your assistant maintains context within conversations:
+    
+    ```text
+    You: "Show me tasks for the mobile app project"
+    Assistant: [Lists tasks]
+    You: "Mark the first two as complete"
+    Assistant: ✓ Marked "Design screens" and "Set up repo" complete
+    ```
+    
+    No need to repeat yourself—your assistant remembers the context.
+  </Accordion>
+  
+  <Accordion title="Rich Formatting" icon="palette">
+    Your assistant uses WhatsApp formatting for readability:
+    
+    - **Bold** for emphasis
+    - *Italics* for secondary info
+    - • Bullet points for lists
+    - ✓ Check marks for confirmations
+    - Emojis for visual cues 🎯 📅 ✅
+  </Accordion>
+  
+  <Accordion title="Quick Replies" icon="reply">
+    Your assistant may offer quick reply buttons for common follow-ups:
+    
+    - "Show more"
+    - "Mark complete"
+    - "Snooze"
+    - "Add details"
+    
+    Tap to respond instantly without typing.
+  </Accordion>
+  
+  <Accordion title="Status Updates" icon="circle-info">
+    Get proactive notifications via WhatsApp:
+    
+    - Morning agenda summaries
+    - Deadline reminders
+    - Future Action executions
+    - Important updates
+    
+    Configure notification preferences in Settings.
+  </Accordion>
+</AccordionGroup>
+
+## Example Workflows
+
+<Tabs>
+  <Tab title="Morning Routine">
+    ```text
+    7:00 AM - Your assistant sends:
+    "Good morning! Here's your day:
+    
+    📅 Calendar:
+    • 9am - Team standup
+    • 2pm - Client presentation
+    
+    ✅ Top priorities:
+    • Finish presentation slides
+    • Review budget proposal
+    • Call vendor about delivery
+    
+    Have a great day! 🌟"
+    
+    You reply: "Move the vendor call to tomorrow"
+    Assistant: "✓ Rescheduled 'Call vendor' to tomorrow"
+    ```
+  </Tab>
+  
+  <Tab title="Quick Capture">
+    ```text
+    While commuting:
+    🎤 Voice note: "Remind me to email the contract to Sarah 
+                    by end of day and include the pricing sheet 
+                    we discussed"
+    
+    Assistant: "✓ Created task: Email contract to Sarah
+    📎 Note: Include pricing sheet from discussion
+    ⏰ Due: Today at 6pm
+    
+    I'll remind you at 5:30pm!"
+    ```
+  </Tab>
+  
+  <Tab title="On-the-Go Updates">
+    ```text
+    During a meeting:
+    You (quietly): "Note: John suggested using React for frontend"
+    
+    Later:
+    You: "What did John suggest in today's meeting?"
+    Assistant: "From your note earlier: John suggested 
+                using React for frontend"
+    ```
+  </Tab>
+  
+  <Tab title="End of Day">
+    ```text
+    6:00 PM - Your assistant sends:
+    "End of day summary:
+    
+    ✅ Completed:
+    • Finished presentation slides
+    • Reviewed budget proposal
+    
+    ⏸️ Still pending:
+    • Call vendor (moved to tomorrow)
+    
+    Tomorrow's prep:
+    • 3 tasks ready to go
+    • No morning meetings—great for deep work!
+    
+    See you tomorrow! 👋"
+    ```
+  </Tab>
+</Tabs>
+
+## Privacy & Security
+
+<Warning>
+  **Important**: WhatsApp messages are subject to WhatsApp's privacy policy. Hyperaide processes your messages securely but cannot control WhatsApp's infrastructure.
+</Warning>
+
+<AccordionGroup>
+  <Accordion title="Message Security" icon="shield">
+    - Messages between you and your assistant are encrypted by WhatsApp
+    - Hyperaide processes messages on secure servers
+    - Messages are never shared with third parties
+    - You can delete your message history anytime
+  </Accordion>
+  
+  <Accordion title="What Hyperaide Stores" icon="database">
+    - Message content to maintain conversation context
+    - User instructions and data you explicitly provide
+    - Message metadata (timestamps, message IDs)
+    - Voice note transcriptions (after processing)
+  </Accordion>
+  
+  <Accordion title="Voice Note Processing" icon="microphone">
+    - Voice notes are transcribed using secure AI services
+    - Audio files are temporarily stored during transcription
+    - Audio is deleted after successful transcription
+    - Transcriptions are retained like text messages
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Assistant Not Responding" icon="circle-exclamation">
+    **Possible solutions:**
+    1. Check your internet connection
+    2. Verify the integration is still active in Settings
+    3. Try sending "hello" to test the connection
+    4. Check if WhatsApp itself is working (try messaging someone else)
+    5. Reconnect the integration if needed
+  </Accordion>
+  
+  <Accordion title="Verification Code Not Working" icon="key">
+    **Possible solutions:**
+    1. Make sure you're sending to the correct number
+    2. Copy the code exactly as shown (6 digits)
+    3. Try generating a new code if the old one expired
+    4. Check that you're using the phone number registered with Hyperaide
+  </Accordion>
+  
+  <Accordion title="Voice Notes Not Transcribing" icon="microphone-slash">
+    **Possible solutions:**
+    1. Ensure the voice note is clear and not too quiet
+    2. Try sending a text message to verify the connection works
+    3. Check if the voice note is too long (max 5 minutes)
+    4. Try recording again with less background noise
+  </Accordion>
+  
+  <Accordion title="Messages Out of Sync" icon="arrows-rotate">
+    **Possible solutions:**
+    1. Wait 30 seconds (processing can take a moment)
+    2. Send a new message to trigger a sync
+    3. Check the web app to see if changes are reflected there
+    4. Reconnect WhatsApp if the issue persists
+  </Accordion>
+</AccordionGroup>
+
+## Tips & Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Use Voice Notes" icon="microphone">
+    Voice notes are faster than typing for capturing detailed thoughts or long lists
+  </Card>
+  
+  <Card title="Set Up Notifications" icon="bell">
+    Configure your assistant to send proactive updates at times that work for you
+  </Card>
+  
+  <Card title="Create Shortcuts" icon="keyboard">
+    Your assistant learns your language patterns—develop personal shorthand
+  </Card>
+  
+  <Card title="Pin the Chat" icon="thumbtack">
+    Pin your assistant's chat in WhatsApp for instant access
+  </Card>
+  
+  <Card title="Use During Downtime" icon="clock">
+    Commutes, waiting rooms, and breaks are perfect for quick assistant check-ins
+  </Card>
+  
+  <Card title="Batch Related Requests" icon="layer-group">
+    Group related messages together so your assistant can process them contextually
+  </Card>
+</CardGroup>
+
+## Disconnecting WhatsApp
+
+If you need to disconnect WhatsApp:
+
+<Steps>
+  <Step title="Open Settings">
+    Go to **Settings → Integrations** in the web app
+  </Step>
+  
+  <Step title="Find WhatsApp">
+    Locate your WhatsApp integration
+  </Step>
+  
+  <Step title="Disconnect">
+    Click **Disconnect** and confirm
+  </Step>
+  
+  <Step title="Verify">
+    Your assistant will no longer respond to WhatsApp messages
+  </Step>
+</Steps>
+
+<Info>
+  Your conversation history and data remain in Hyperaide even after disconnecting. You can reconnect WhatsApp anytime without losing information.
+</Info>
+
+<Note>
+  WhatsApp is the most popular communication channel for Hyperaide users because it's instant, familiar, and always with you. Set it up first and you'll wonder how you lived without it!
+</Note>
+

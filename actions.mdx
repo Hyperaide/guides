@@ -1,0 +1,355 @@
+---
+title: "Actions"
+description: "What your Hyperaide assistant can do for you"
+---
+
+Actions are the operations your Hyperaide assistant can perform on your databases and workflows. They transform your assistant from a passive information store into an active productivity partner.
+
+## What are Actions?
+
+Actions are built-in capabilities that allow your assistant to interact with your data. Rather than just storing information, your assistant can create, update, search, and manipulate records across all your databases.
+
+<Info>
+  You don't need to set up or configure actions—they're automatically available for all your databases once you create them.
+</Info>
+
+## Core Actions
+
+Your assistant comes with powerful built-in actions:
+
+<CardGroup cols={2}>
+  <Card title="Create Records" icon="plus">
+    Add new items to any database with natural language
+    
+    *"Add a task to review the quarterly report by Friday"*
+  </Card>
+  
+  <Card title="Update Records" icon="pen">
+    Modify existing entries easily
+    
+    *"Mark the design review task as complete"*
+  </Card>
+  
+  <Card title="Query & Search" icon="magnifying-glass">
+    Find information across all your databases
+    
+    *"Show me all tasks due this week"*
+  </Card>
+  
+  <Card title="Delete Records" icon="trash">
+    Remove items you no longer need
+    
+    *"Delete all completed tasks from last month"*
+  </Card>
+  
+  <Card title="Link Records" icon="link">
+    Connect related items across databases
+    
+    *"Link this task to the Website Redesign project"*
+  </Card>
+  
+  <Card title="Bulk Operations" icon="layer-group">
+    Perform actions on multiple records at once
+    
+    *"Mark all Q1 project tasks as archived"*
+  </Card>
+</CardGroup>
+
+## How Actions Work
+
+When you send a message to your assistant, it analyzes your intent and determines which actions to take:
+
+<Steps>
+  <Step title="Natural Language Processing">
+    You send a message in plain language: *"Add a task to call the client tomorrow"*
+  </Step>
+  
+  <Step title="Intent Recognition">
+    Your assistant understands you want to create a new record in the tasks database
+  </Step>
+  
+  <Step title="Action Execution">
+    The assistant executes the create action with the appropriate data
+  </Step>
+  
+  <Step title="Confirmation">
+    You receive confirmation that the action was completed successfully
+  </Step>
+</Steps>
+
+## Creating Records
+
+Add new records to your databases conversationally:
+
+<Tabs>
+  <Tab title="Tasks">
+    ```text
+    "Add a task to review the budget by Friday"
+    "Create a task: call Mom tomorrow at 3pm"
+    "New task - finish the presentation, high priority"
+    ```
+  </Tab>
+  
+  <Tab title="Projects">
+    ```text
+    "Create a new project called Website Redesign"
+    "Start a project for the Q2 marketing campaign"
+    "Add a project: Mobile App Development"
+    ```
+  </Tab>
+  
+  <Tab title="Contacts">
+    ```text
+    "Add John Smith to my contacts with email john@example.com"
+    "Create a contact for Sarah Johnson, she's a client"
+    "New contact: Mike Brown, phone: 555-1234"
+    ```
+  </Tab>
+  
+  <Tab title="Notes">
+    ```text
+    "Create a note about today's meeting with the title 'Q1 Planning'"
+    "Add a note: Remember to check on the server migration"
+    "Save this idea: What if we gamified the onboarding?"
+    ```
+  </Tab>
+</Tabs>
+
+<Tip>
+  Your assistant is smart about understanding context. If you mention "tomorrow," "next week," or "Friday," it automatically calculates the correct date.
+</Tip>
+
+## Updating Records
+
+Modify existing records naturally:
+
+<AccordionGroup>
+  <Accordion title="Status Updates" icon="toggle-on">
+    ```text
+    "Mark the design review task as complete"
+    "Change the project status to in progress"
+    "Set the priority of the budget review to high"
+    ```
+  </Accordion>
+  
+  <Accordion title="Field Changes" icon="pen-field">
+    ```text
+    "Change the meeting time to 3pm"
+    "Update the description of the website project"
+    "Move the task deadline to next Friday"
+    ```
+  </Accordion>
+  
+  <Accordion title="Adding Information" icon="circle-plus">
+    ```text
+    "Add a note to the client meeting task about what was discussed"
+    "Include Sarah's phone number in her contact"
+    "Update the project with today's progress"
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Querying Records
+
+Search and retrieve information from your databases:
+
+<Tabs>
+  <Tab title="Simple Queries">
+    ```text
+    "Show me all my tasks"
+    "What tasks are due this week?"
+    "List all my projects"
+    "Find contacts in San Francisco"
+    ```
+  </Tab>
+  
+  <Tab title="Filtered Queries">
+    ```text
+    "Show me high priority tasks due this week"
+    "What tasks are assigned to the Marketing project?"
+    "Find all contacts who are clients"
+    "List incomplete tasks older than 30 days"
+    ```
+  </Tab>
+  
+  <Tab title="Complex Queries">
+    ```text
+    "Show me tasks due soon that are linked to active projects"
+    "What projects have no tasks assigned to them?"
+    "Find all contacts I haven't interacted with in 3 months"
+    "List tasks created last week that are still incomplete"
+    ```
+  </Tab>
+  
+  <Tab title="Aggregations">
+    ```text
+    "How many tasks do I have in total?"
+    "What percentage of my tasks are complete?"
+    "Show me my most active projects by task count"
+    "How many contacts do I have by category?"
+    ```
+  </Tab>
+</Tabs>
+
+## Linking Records
+
+Create relationships between records in different databases:
+
+<Steps>
+  <Step title="Identify Related Items">
+    You have a task that belongs to a project, or a note that relates to a contact
+  </Step>
+  
+  <Step title="Request the Link">
+    *"Link the design task to the Website Redesign project"*
+  </Step>
+  
+  <Step title="Automatic Connection">
+    Your assistant creates the relationship automatically
+  </Step>
+  
+  <Step title="Query Connected Data">
+    *"Show me all tasks for the Website Redesign project"*
+  </Step>
+</Steps>
+
+<Info>
+  Links work bidirectionally. If you link a task to a project, you can query tasks from the project OR query the project from the task.
+</Info>
+
+## Bulk Operations
+
+Perform actions on multiple records simultaneously:
+
+<AccordionGroup>
+  <Accordion title="Bulk Updates" icon="pen-to-square">
+    ```text
+    "Mark all tasks in the Q1 project as complete"
+    "Change all high priority tasks to medium priority"
+    "Set all contacts in New York to category: East Coast"
+    ```
+  </Accordion>
+  
+  <Accordion title="Bulk Deletion" icon="trash-can">
+    ```text
+    "Delete all completed tasks from last year"
+    "Remove all tasks with no due date"
+    "Clear all archived projects"
+    ```
+  </Accordion>
+  
+  <Accordion title="Bulk Creation" icon="clone">
+    ```text
+    "Create tasks for each step in the project plan"
+    "Add a weekly review task for the next 4 weeks"
+    "Generate contacts from this email list"
+    ```
+  </Accordion>
+  
+  <Accordion title="Bulk Linking" icon="link-horizontal">
+    ```text
+    "Link all design tasks to the Website Redesign project"
+    "Connect all Q1 notes to the quarterly review project"
+    "Associate all client contacts with the Sales project"
+    ```
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Bulk operations are powerful but irreversible. Your assistant will typically ask for confirmation before executing bulk deletions or updates.
+</Warning>
+
+## Action Workflows
+
+Combine actions to create powerful workflows:
+
+<Tabs>
+  <Tab title="Task Management">
+    **Daily Review Workflow**
+    
+    1. "Show me all tasks due today"
+    2. "Mark the completed ones as done"
+    3. "Reschedule any remaining ones to tomorrow"
+    4. "Create a summary of what I accomplished"
+  </Tab>
+  
+  <Tab title="Project Planning">
+    **New Project Setup**
+    
+    1. "Create a project called Mobile App Launch"
+    2. "Add tasks for design, development, testing, and marketing"
+    3. "Link all tasks to the Mobile App Launch project"
+    4. "Set deadlines for each phase"
+  </Tab>
+  
+  <Tab title="Contact Management">
+    **Relationship Maintenance**
+    
+    1. "Show contacts I haven't talked to in 2 months"
+    2. "Create follow-up tasks for the top 5"
+    3. "Add notes about what to discuss with each"
+    4. "Schedule reminders for next week"
+  </Tab>
+  
+  <Tab title="Data Cleanup">
+    **Database Maintenance**
+    
+    1. "Find all tasks with no due date"
+    2. "Ask me about each one"
+    3. "Either set a due date or delete it"
+    4. "Summarize what was cleaned up"
+  </Tab>
+</Tabs>
+
+## Smart Context Understanding
+
+Your assistant understands context and can chain actions intelligently:
+
+<CodeGroup>
+```text Example 1
+You: "Create a project for the website redesign"
+Assistant: ✓ Created project "Website Redesign"
+
+You: "Add tasks for it: design mockups, develop frontend, test on mobile"
+Assistant: ✓ Created 3 tasks and linked them to Website Redesign
+```
+
+```text Example 2
+You: "Show me tasks due this week"
+Assistant: Here are your 5 tasks due this week...
+
+You: "Mark the first two as complete"
+Assistant: ✓ Marked "Review budget" and "Call client" as complete
+```
+
+```text Example 3
+You: "I met with John today to discuss the project"
+Assistant: ✓ Created interaction record and linked to John Smith
+          ✓ Added note to Website Redesign project
+```
+</CodeGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye">
+    The more specific your request, the better the result. Include relevant details like dates, priorities, and categories.
+  </Card>
+  
+  <Card title="Use Natural Language" icon="comments">
+    Don't worry about syntax or commands. Talk to your assistant like you would a human colleague.
+  </Card>
+  
+  <Card title="Confirm Bulk Actions" icon="shield-check">
+    Review what will be affected before confirming bulk operations, especially deletions.
+  </Card>
+  
+  <Card title="Link Related Data" icon="sitemap">
+    Create connections between records to build a rich, queryable knowledge graph.
+  </Card>
+</CardGroup>
+
+<Note>
+  Remember: Actions are just tools your assistant uses to help you. Focus on **what** you want to accomplish, not **how** to do it. Your assistant figures out the right actions to take.
+</Note>
+

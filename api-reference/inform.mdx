@@ -1,0 +1,352 @@
+---
+title: 'POST /inform'
+description: 'Provide information to your assistant without expecting a response'
+---
+
+## Overview
+
+The `/inform` endpoint allows you to provide information to your Hyperaide assistant without triggering any immediate actions. Use this when you want to add context or data to your assistant's knowledge base for future reference.
+
+<Info>
+  Use this endpoint when you want to share information with your assistant but don't need it to take action. The information becomes part of your conversation history and can be referenced later.
+</Info>
+
+## Endpoint
+
+```
+POST https://api.hyperaide.com/inform
+```
+
+## Authentication
+
+Include your API key in the request headers:
+
+```bash
+x-api-key: your_api_key_here
+```
+
+## Request Body
+
+<ParamField body="content" type="string" required>
+  The information you want to share with your assistant. Can be any text, data, or context you want to make available.
+  
+  **Example:** `"The deployment to production completed successfully at 3:45 PM"`
+</ParamField>
+
+## Request Example
+
+<CodeGroup>
+
+```bash cURL
+curl -X POST https://api.hyperaide.com/inform \
+  -H "x-api-key: your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "content": "The deployment to production completed successfully at 3:45 PM"
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.hyperaide.com/inform', {
+  method: 'POST',
+  headers: {
+    'x-api-key': 'your_api_key_here',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    content: 'The deployment to production completed successfully at 3:45 PM'
+  })
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    'https://api.hyperaide.com/inform',
+    headers={
+        'x-api-key': 'your_api_key_here',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'content': 'The deployment to production completed successfully at 3:45 PM'
+    }
+)
+
+print(response.json())
+```
+
+```go Go
+package main
+
+import (
+    "bytes"
+    "encoding/json"
+    "net/http"
+)
+
+func main() {
+    payload := map[string]string{
+        "content": "The deployment to production completed successfully at 3:45 PM",
+    }
+    
+    jsonData, _ := json.Marshal(payload)
+    
+    req, _ := http.NewRequest("POST", "https://api.hyperaide.com/inform", bytes.NewBuffer(jsonData))
+    req.Header.Set("x-api-key", "your_api_key_here")
+    req.Header.Set("Content-Type", "application/json")
+    
+    client := &http.Client{}
+    resp, _ := client.Do(req)
+    defer resp.Body.Close()
+}
+```
+
+</CodeGroup>
+
+## Response
+
+### Success Response (200 OK)
+
+```json
+{
+  "message": "Hyperaide informed"
+}
+```
+
+The information has been recorded and is now available to your assistant for future reference.
+
+<Note>
+  Unlike `/instruct`, this endpoint doesn't trigger your assistant to take actions. It simply records the information as context.
+</Note>
+
+### Error Responses
+
+<Accordion title="401 Unauthorized">
+  **Missing or invalid API key**
+
+  ```json
+  {
+    "error": "Invalid API key"
+  }
+  ```
+
+  Verify your API key is correct and included in the `x-api-key` header.
+</Accordion>
+
+<Accordion title="404 Not Found">
+  **User not found**
+
+  ```json
+  {
+    "error": "User not found"
+  }
+  ```
+
+  The API key is valid but the associated user doesn't exist. Contact support.
+</Accordion>
+
+## Inform vs Instruct
+
+Understanding when to use each endpoint:
+
+<Tabs>
+  <Tab title="Use Inform When">
+    **You want to provide context without triggering actions**
+
+    ✅ Logging events for future reference  
+    ✅ Recording metrics or status updates  
+    ✅ Feeding data into your assistant's knowledge base  
+    ✅ Building context for later queries  
+    ✅ Passive information sharing  
+
+    ```javascript
+    // Example: Log deployment status
+    await fetch('https://api.hyperaide.com/inform', {
+      method: 'POST',
+      headers: { 'x-api-key': apiKey, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        content: 'Deployment v2.3.1 completed at 15:30 UTC'
+      })
+    });
+    ```
+  </Tab>
+  
+  <Tab title="Use Instruct When">
+    **You want your assistant to take action**
+
+    ✅ Creating tasks or reminders  
+    ✅ Sending notifications  
+    ✅ Updating databases  
+    ✅ Triggering workflows  
+    ✅ Active command execution  
+
+    ```javascript
+    // Example: Create a follow-up task
+    await fetch('https://api.hyperaide.com/instruct', {
+      method: 'POST',
+      headers: { 'x-api-key': apiKey, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        content: 'Create a task to verify the deployment tomorrow morning'
+      })
+    });
+    ```
+  </Tab>
+</Tabs>
+
+## Use Cases
+
+<Tabs>
+  <Tab title="Activity Logging">
+    **Keep your assistant informed about system events**
+
+    ```javascript
+    // Log user activity
+    await fetch('https://api.hyperaide.com/inform', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `User ${username} completed onboarding at ${timestamp}`
+      })
+    });
+    ```
+
+    Later, you can ask your assistant: *"How many users completed onboarding this week?"*
+  </Tab>
+  
+  <Tab title="Status Updates">
+    **Feed system status into your assistant's context**
+
+    ```javascript
+    // Report system health
+    await fetch('https://api.hyperaide.com/inform', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `System health check: CPU ${cpu}%, Memory ${memory}%, Status: ${status}`
+      })
+    });
+    ```
+
+    Your assistant can reference this when you ask about system performance.
+  </Tab>
+  
+  <Tab title="Data Ingestion">
+    **Feed external data for analysis**
+
+    ```javascript
+    // Import analytics data
+    await fetch('https://api.hyperaide.com/inform', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `Daily metrics: ${visitors} visitors, ${conversions} conversions, ${revenue} revenue`
+      })
+    });
+    ```
+
+    Ask your assistant to analyze trends or compare data later.
+  </Tab>
+  
+  <Tab title="Context Building">
+    **Build rich context for future conversations**
+
+    ```javascript
+    // Record meeting outcomes
+    await fetch('https://api.hyperaide.com/inform', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.HYPERAIDE_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `Client meeting with ${client}: Agreed on ${decisions}. Next meeting: ${nextDate}`
+      })
+    });
+    ```
+
+    Your assistant can recall this context in future client-related queries.
+  </Tab>
+</Tabs>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Structured Information" icon="table">
+    Include relevant details and structure your information clearly for easy reference
+  </Card>
+  
+  <Card title="Consistent Format" icon="list">
+    Use consistent formats for similar types of information to help your assistant recognize patterns
+  </Card>
+  
+  <Card title="Relevant Context" icon="circle-info">
+    Include timestamps, identifiers, and context that makes the information useful later
+  </Card>
+  
+  <Card title="Batch When Possible" icon="layer-group">
+    For multiple related updates, consider combining them into a single inform call
+  </Card>
+</CardGroup>
+
+## Example Workflow
+
+Here's how `inform` and `instruct` work together:
+
+```javascript
+// 1. Inform about an event (no action)
+await fetch('https://api.hyperaide.com/inform', {
+  method: 'POST',
+  headers: { 'x-api-key': apiKey, 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    content: 'Server CPU reached 85% at 14:23 UTC'
+  })
+});
+
+// 2. If threshold exceeded, instruct to take action
+if (cpuUsage > 90) {
+  await fetch('https://api.hyperaide.com/instruct', {
+    method: 'POST',
+    headers: { 'x-api-key': apiKey, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      content: 'Server CPU critical at 92%. Send alert via WhatsApp and create incident task.'
+    })
+  });
+}
+
+// 3. Later, ask your assistant
+// "What was the server CPU pattern today?"
+// Your assistant can reference the informed data to provide insights
+```
+
+## How Information is Used
+
+Information sent via `/inform`:
+
+1. **Stored in Context**: Added to your conversation history
+2. **Searchable**: Can be referenced in future queries
+3. **Analyzed**: Your assistant can identify patterns and trends
+4. **Recalled**: Available when relevant to future conversations
+
+<Tip>
+  Think of `/inform` as feeding your assistant's memory. It doesn't trigger actions, but enriches your assistant's understanding of your world.
+</Tip>
+
+## Related Endpoints
+
+<Card title="POST /instruct" icon="terminal" href="/api-reference/instruct">
+  Use this endpoint when you want your assistant to take action on information
+</Card>
+

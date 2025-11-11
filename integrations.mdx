@@ -1,0 +1,434 @@
+---
+title: "Integrations"
+description: "Connect Hyperaide with your favorite apps and services"
+---
+
+Integrations are what make Hyperaide truly powerful. Connect your assistant to the tools you already use—task managers, calendars, communication platforms, and more—to create a unified productivity hub.
+
+## What are Integrations?
+
+Integrations allow Hyperaide to interact with external services on your behalf. Your assistant can:
+
+- **Read data** from connected services (tasks, events, issues, etc.)
+- **Create and update** items across platforms
+- **Sync information** between your services and Hyperaide databases
+- **Automate workflows** that span multiple tools
+
+<Info>
+  Once connected, your assistant can manage these services using natural language, just like it manages your Hyperaide databases.
+</Info>
+
+## Integration Types
+
+<Tabs>
+  <Tab title="Communication">
+    **How you interact with your assistant**
+    
+    <CardGroup cols={2}>
+      <Card title="WhatsApp" icon="whatsapp" href="/integrations/whatsapp">
+        Message your assistant on WhatsApp for instant mobile access
+      </Card>
+      
+      <Card title="Telegram" icon="telegram" href="/integrations/telegram">
+        Connect via Telegram for cross-platform messaging
+      </Card>
+      
+      <Card title="Email" icon="envelope" href="/integrations/email">
+        Email your assistant for longer-form communication
+      </Card>
+      
+      <Card title="Slack" icon="slack" href="/integrations/slack">
+        Bring your assistant into your team's workspace (coming soon)
+      </Card>
+    </CardGroup>
+  </Tab>
+  
+  <Tab title="Task Management">
+    **Manage tasks across platforms**
+    
+    <CardGroup cols={2}>
+      <Card title="Todoist" icon="check-square" href="/integrations/todoist">
+        Sync tasks with Todoist projects and labels
+      </Card>
+      
+      <Card title="TickTick" icon="list-check" href="/integrations/ticktick">
+        Connect with TickTick for task management
+      </Card>
+      
+      <Card title="Linear" icon="chart-network" href="/integrations/linear">
+        Manage Linear issues and projects
+      </Card>
+    </CardGroup>
+  </Tab>
+  
+  <Tab title="Productivity">
+    **Connect your productivity tools**
+    
+    <CardGroup cols={2}>
+      <Card title="Google Calendar" icon="calendar" href="/integrations/google-calendar">
+        Manage events and check your schedule
+      </Card>
+      
+      <Card title="Notion" icon="book" href="/integrations/notion">
+        Sync with Notion databases and pages
+      </Card>
+      
+      <Card title="GitHub" icon="github" href="/integrations/github">
+        Track issues, PRs, and repository activity
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>
+
+## How Integrations Work
+
+<Steps>
+  <Step title="Connect Your Account">
+    Authorize Hyperaide to access your external service with OAuth
+  </Step>
+  
+  <Step title="Choose What to Sync">
+    Select which projects, calendars, or spaces to make available
+  </Step>
+  
+  <Step title="Talk Naturally">
+    Your assistant can now access and manage data from that service
+  </Step>
+  
+  <Step title="Automate Workflows">
+    Create Future Actions that work across multiple integrations
+  </Step>
+</Steps>
+
+## Why Use Integrations?
+
+<AccordionGroup>
+  <Accordion title="Unified Interface" icon="grid">
+    Manage all your tools from one place—talk to your assistant instead of switching between apps.
+    
+    *"Show me all my tasks from Todoist and Linear"*  
+    *"What's on my Google Calendar tomorrow?"*  
+    *"Create a GitHub issue for this bug I found"*
+  </Accordion>
+  
+  <Accordion title="Cross-Platform Workflows" icon="diagram-project">
+    Create automations that span multiple services:
+    
+    *"When I complete a task in Todoist, add a note to my daily journal"*  
+    *"Every morning, show me today's calendar and top 3 Linear issues"*  
+    *"If a GitHub issue is assigned to me, create a task in my Hyperaide database"*
+  </Accordion>
+  
+  <Accordion title="Natural Language Control" icon="message-bot">
+    No need to learn each app's interface or shortcuts. Use natural language:
+    
+    *"Move all my overdue Todoist tasks to next Monday"*  
+    *"Block 2 hours on my calendar tomorrow for deep work"*  
+    *"What Notion pages did I update this week?"*
+  </Accordion>
+  
+  <Accordion title="Centralized Knowledge" icon="brain">
+    Your assistant understands context across all services:
+    
+    *"What's the status of the website redesign project?"* (pulls from Linear, Notion, and your databases)  
+    *"Show me everything related to client XYZ"* (finds tasks, calendar events, and notes)
+  </Accordion>
+</AccordionGroup>
+
+## Setting Up Integrations
+
+<Tabs>
+  <Tab title="Web App">
+    ### Connect via Web Interface
+    
+    <Steps>
+      <Step title="Navigate to Integrations">
+        Go to **Settings → Integrations** in the web app
+      </Step>
+      
+      <Step title="Choose Integration">
+        Select the service you want to connect
+      </Step>
+      
+      <Step title="Authorize Access">
+        Log in and authorize Hyperaide to access your account
+      </Step>
+      
+      <Step title="Configure Settings">
+        Choose what data to sync and set preferences
+      </Step>
+      
+      <Step title="Start Using">
+        Your assistant can now interact with that service!
+      </Step>
+    </Steps>
+  </Tab>
+  
+  <Tab title="Ask Your Assistant">
+    ### Connect via Natural Language
+    
+    Some integrations can be set up by asking your assistant:
+    
+    ```text
+    "Connect my Todoist account"
+    "I want to integrate Google Calendar"
+    "Help me set up WhatsApp"
+    ```
+    
+    Your assistant will guide you through the connection process.
+  </Tab>
+</Tabs>
+
+## Popular Integration Workflows
+
+<Tabs>
+  <Tab title="Task Sync">
+    **Unified Task Management**
+    
+    ```text
+    Setup:
+    - Connect Todoist and Linear
+    - Create a "Work Tasks" database in Hyperaide
+    
+    Daily workflow:
+    "Show me all my tasks from Todoist and Linear"
+    "Create a task in Todoist: Review Q1 budget"
+    "What Linear issues are assigned to me?"
+    "Mark all completed tasks as done across all platforms"
+    ```
+    
+    Your assistant manages tasks across all platforms seamlessly.
+  </Tab>
+  
+  <Tab title="Calendar + Tasks">
+    **Time-Aware Task Management**
+    
+    ```text
+    Setup:
+    - Connect Google Calendar and Todoist
+    - Set up daily Future Actions
+    
+    Automated workflow:
+    Every morning: "Show me today's calendar and top 5 tasks"
+    When scheduling: "Find a 2-hour block this week for the design task"
+    Before meetings: "Prepare me for my 3pm meeting"
+    End of day: "What did I accomplish and what's left?"
+    ```
+    
+    Your assistant coordinates your time and tasks intelligently.
+  </Tab>
+  
+  <Tab title="Project Hub">
+    **Centralized Project Management**
+    
+    ```text
+    Setup:
+    - Connect Linear, GitHub, Notion, and Slack
+    - Create a Projects database in Hyperaide
+    
+    Project workflow:
+    "What's the status of the mobile app project?"
+      → Checks Linear issues, GitHub PRs, Notion docs
+    
+    "Update the team on yesterday's progress"
+      → Summarizes activity and posts to Slack
+    
+    "Show me all open GitHub issues for the API"
+      → Filters and displays relevant issues
+    ```
+    
+    Your assistant becomes your project command center.
+  </Tab>
+  
+  <Tab title="Knowledge Capture">
+    **Universal Information Capture**
+    
+    ```text
+    Setup:
+    - Connect Notion, Email, and WhatsApp
+    - Create Notes and Ideas databases
+    
+    Capture workflow:
+    Via WhatsApp: "Note: great design inspiration at acme.co"
+    Via Email: Forward newsletter → "Save key insights to Notion"
+    Via Web: "Create a Notion page with my project ideas"
+    
+    Query: "Find all my notes about design from the last month"
+      → Searches across all sources
+    ```
+    
+    Capture anywhere, access everywhere.
+  </Tab>
+</Tabs>
+
+## Integration Permissions
+
+<Warning>
+  Integrations require access to your external accounts. Hyperaide only requests the minimum permissions needed to function and never accesses data you don't explicitly authorize.
+</Warning>
+
+### What Hyperaide Can Access
+
+<AccordionGroup>
+  <Accordion title="Read Permissions" icon="eye">
+    - View tasks, events, issues, or pages you select
+    - Read metadata (names, dates, status, etc.)
+    - Access data only from projects/spaces you authorize
+  </Accordion>
+  
+  <Accordion title="Write Permissions" icon="pen">
+    - Create new items (tasks, events, notes)
+    - Update existing items (status, descriptions, dates)
+    - Only when you explicitly ask the assistant to do so
+  </Accordion>
+  
+  <Accordion title="What Hyperaide CANNOT Do" icon="shield-xmark">
+    - Access data from unauthorized projects/spaces
+    - Make changes without your instruction
+    - Share your data with third parties
+    - Delete items (unless you explicitly request it)
+  </Accordion>
+</AccordionGroup>
+
+## Managing Integrations
+
+<Tabs>
+  <Tab title="View Connections">
+    See all active integrations in **Settings → Integrations**:
+    
+    - Connection status (active, expired, error)
+    - Last sync time
+    - Permissions granted
+    - Data being accessed
+  </Tab>
+  
+  <Tab title="Reconnect">
+    If an integration stops working:
+    
+    1. Go to the integration settings
+    2. Click **Reconnect**
+    3. Re-authorize access
+    4. Your assistant resumes access
+  </Tab>
+  
+  <Tab title="Disconnect">
+    To remove an integration:
+    
+    1. Go to integration settings
+    2. Click **Disconnect**
+    3. Confirm removal
+    4. Hyperaide immediately loses access
+    
+    <Info>
+      Your Hyperaide databases are unaffected—only the connection to the external service is removed.
+    </Info>
+  </Tab>
+  
+  <Tab title="Reconfigure">
+    Adjust integration settings:
+    
+    - Change which projects/calendars to sync
+    - Update sync frequency
+    - Modify notification preferences
+    - Set up custom mapping rules
+  </Tab>
+</Tabs>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Integration Not Working" icon="triangle-exclamation">
+    **Possible solutions:**
+    - Check connection status in Settings
+    - Try reconnecting the integration
+    - Verify you still have access to the external service
+    - Check if the service is experiencing downtime
+  </Accordion>
+  
+  <Accordion title="Data Not Syncing" icon="arrows-rotate">
+    **Possible solutions:**
+    - Wait a few moments (sync can take 30-60 seconds)
+    - Manually trigger a sync in integration settings
+    - Check that you authorized the correct account
+    - Verify the data exists in the external service
+  </Accordion>
+  
+  <Accordion title="Authorization Expired" icon="key">
+    **Solution:**
+    Many services require periodic re-authorization for security:
+    
+    1. You'll see an "Expired" status in Settings
+    2. Click **Reconnect** and re-authorize
+    3. Your integration resumes working immediately
+  </Accordion>
+  
+  <Accordion title="Missing Permissions" icon="lock">
+    **Solution:**
+    If your assistant can't perform an action:
+    
+    1. Check what permissions were granted
+    2. Disconnect and reconnect with fuller permissions
+    3. Ensure you have access in the external service
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Start Small" icon="seedling">
+    Connect one integration at a time and learn how it works before adding more.
+  </Card>
+  
+  <Card title="Be Selective" icon="filter">
+    Only sync the projects/calendars you actively use with Hyperaide to reduce noise.
+  </Card>
+  
+  <Card title="Check Permissions" icon="shield-check">
+    Review what access each integration has and adjust as needed.
+  </Card>
+  
+  <Card title="Test Workflows" icon="flask">
+    Experiment with commands before creating automations to ensure they work as expected.
+  </Card>
+  
+  <Card title="Monitor Sync Status" icon="chart-line">
+    Occasionally check that integrations are syncing properly.
+  </Card>
+  
+  <Card title="Update Regularly" icon="arrows-rotate">
+    If an integration updates its API, you may need to reconnect.
+  </Card>
+</CardGroup>
+
+## Coming Soon
+
+<CardGroup cols={2}>
+  <Card title="Slack" icon="slack">
+    Team workspace integration for collaborative assistant features
+  </Card>
+  
+  <Card title="Gmail" icon="envelope">
+    Email management and smart inbox features
+  </Card>
+  
+  <Card title="Asana" icon="diagram-project">
+    Project and task management for teams
+  </Card>
+  
+  <Card title="Trello" icon="trello">
+    Visual project management with boards and cards
+  </Card>
+  
+  <Card title="Jira" icon="jira">
+    Software development project tracking
+  </Card>
+  
+  <Card title="Custom Integrations" icon="puzzle-piece">
+    API access for building your own integrations
+  </Card>
+</CardGroup>
+
+<Note>
+  **Want an integration we don't have yet?** Let us know at [jp@hyperaide.com](mailto:jp@hyperaide.com). We prioritize integrations based on user demand.
+</Note>
+

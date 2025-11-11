@@ -1,33 +1,137 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'Hyperaide API Reference'
+description: 'Programmatically interact with your Hyperaide assistant'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Overview
 
-## Welcome
+The Hyperaide API allows you to programmatically interact with your assistant, enabling integrations with external services, custom automations, and advanced workflows.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+## Base URL
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+```
+https://api.hyperaide.com
+```
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All API endpoints require authentication using an API key. Include your API key in the request headers:
+
+```bash
+x-api-key: your_api_key_here
+```
+
+### Getting Your API Key
+
+1. Log in to the Hyperaide web app
+2. Navigate to **Settings → API Keys**
+3. Click **Create New API Key**
+4. Copy and securely store your key
+
+<Warning>
+  **Keep your API key secure!** Never commit API keys to version control or share them publicly. Treat them like passwords.
+</Warning>
+
+## Core Endpoints
+
+The Hyperaide API provides two primary endpoints for interacting with your assistant:
+
+<CardGroup cols={2}>
+  <Card title="Instruct" icon="terminal" href="/api-reference/instruct">
+    Send instructions to your assistant for execution
+  </Card>
+  
+  <Card title="Inform" icon="info" href="/api-reference/inform">
+    Provide information to your assistant without expecting a response
+  </Card>
+</CardGroup>
+
+## Use Cases
+
+<AccordionGroup>
+  <Accordion title="Workflow Automation" icon="robot">
+    Trigger your assistant from external automation tools like Zapier, Make, or n8n.
+    
+    Example: When a form is submitted, instruct your assistant to create tasks and send notifications.
+  </Accordion>
+  
+  <Accordion title="Custom Integrations" icon="puzzle-piece">
+    Build custom integrations with services not natively supported by Hyperaide.
+    
+    Example: Connect your CRM system to automatically inform your assistant of new leads.
+  </Accordion>
+  
+  <Accordion title="IoT & Smart Home" icon="house">
+    Connect IoT devices and smart home systems to your assistant.
+    
+    Example: When a sensor is triggered, instruct your assistant to log the event.
+  </Accordion>
+  
+  <Accordion title="Data Ingestion" icon="database">
+    Feed external data into your assistant's knowledge base.
+    
+    Example: Regularly inform your assistant about system metrics or analytics.
+  </Accordion>
+  
+  <Accordion title="Custom Notifications" icon="bell">
+    Send custom notifications or alerts to yourself through your assistant.
+    
+    Example: Server monitoring tools can instruct your assistant to alert you via WhatsApp.
+  </Accordion>
+</AccordionGroup>
+
+## Rate Limits
+
+<Note>
+  **Current Rate Limits:**
+  - 100 requests per minute per API key
+  - 10,000 requests per day per API key
+  
+  Contact support if you need higher limits for your use case.
+</Note>
+
+## Error Handling
+
+All endpoints return standard HTTP status codes:
+
+| Status Code | Meaning |
+|-------------|---------|
+| `200` | Success |
+| `400` | Bad Request - Invalid parameters |
+| `401` | Unauthorized - Invalid or missing API key |
+| `404` | Not Found - Resource doesn't exist |
+| `429` | Too Many Requests - Rate limit exceeded |
+| `500` | Internal Server Error |
+
+Error responses include a JSON body with details:
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+{
+  "error": "Error type",
+  "message": "Detailed error message"
+}
 ```
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Secure Storage" icon="lock">
+    Store API keys in environment variables or secure secret managers, never in code
+  </Card>
+  
+  <Card title="Error Handling" icon="shield-exclamation">
+    Implement proper error handling and retry logic in your integrations
+  </Card>
+  
+  <Card title="Rate Limiting" icon="gauge">
+    Respect rate limits and implement backoff strategies for retries
+  </Card>
+  
+  <Card title="Logging" icon="file-lines">
+    Log API requests for debugging and monitoring purposes
+  </Card>
+</CardGroup>
+
+## Support
+
+Need help with the API? Contact us at [jp@hyperaide.com](mailto:jp@hyperaide.com) or visit our [community forum](https://community.hyperaide.com).

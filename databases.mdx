@@ -1,0 +1,227 @@
+---
+title: "Databases"
+description: "Structure and store information about anything in your life"
+---
+
+Databases are the heart of Hyperaide. They are collections of structured information that help you organize and manage everything important to you.
+
+## What are Databases?
+
+Think of databases as smart, flexible storage containers for your information. You can create a database for tasks, projects, ideas, contacts, goals, habits—anything you want to track and manage.
+
+<Info>
+  **Example**: A tasks database might include fields like name, description, due date, and priority. A contacts database might include name, email, phone number, and relationship type.
+</Info>
+
+Each database you create can have its own set of fields, and you can link databases together to create powerful relationships between your information.
+
+## Creating a Database
+
+There are two ways to create a database in Hyperaide:
+
+<Tabs>
+  <Tab title="Ask Your Assistant">
+    The easiest way! Just tell your assistant what you want to track:
+    
+    - *"Create a database for my reading list"*
+    - *"I need a database to track my workouts"*
+    - *"Set up a projects database"*
+    
+    Your assistant will create the database and suggest relevant fields based on what you want to track.
+  </Tab>
+  
+  <Tab title="Manual Creation">
+    For more control, create a database manually:
+    
+    1. Navigate to the **Databases** page in the web app
+    2. Click **Create Database**
+    3. Give your database a name and description
+    4. Add fields with types and descriptions
+    5. Save and start using it
+  </Tab>
+</Tabs>
+
+## Database Fields
+
+Each database contains fields—the individual pieces of information that make up a database record. Hyperaide supports several field types:
+
+<CardGroup cols={2}>
+  <Card title="Text" icon="font">
+    Store any text content like names, descriptions, notes, or URLs
+  </Card>
+  
+  <Card title="Number" icon="hashtag">
+    Store numerical values for quantities, prices, ratings, or counts
+  </Card>
+  
+  <Card title="Date" icon="calendar">
+    Store dates and times for deadlines, appointments, or timestamps
+  </Card>
+  
+  <Card title="Boolean" icon="toggle-on">
+    Store yes/no values like completed status or flags
+  </Card>
+</CardGroup>
+
+### Field Descriptions
+
+Each field has a description that tells Hyperaide what the field is for and how to use it. This is crucial—think of it like a prompt that guides your assistant's understanding.
+
+<Tip>
+  **Pro tip**: Write clear, detailed field descriptions. Instead of "date," write "The due date when this task should be completed." Your assistant uses these descriptions to better understand your data.
+</Tip>
+
+## Database Descriptions
+
+Your database itself also has a description. This description helps Hyperaide understand the purpose of the database and when to use it.
+
+<CodeGroup>
+```text Good Description
+"Tasks I need to complete, including personal and work-related items. Each task has a description, due date, priority level, and completion status. Use this database to track what I need to do and when."
+```
+
+```text Basic Description
+"My tasks"
+```
+</CodeGroup>
+
+The better your description, the better your assistant understands how to work with your data.
+
+## Linking Databases
+
+This is where Hyperaide becomes powerful. Database records can link to records in other databases automatically—no additional setup required.
+
+<Steps>
+  <Step title="Create related databases">
+    For example, create both a "Tasks" and "Projects" database
+  </Step>
+  
+  <Step title="Tell your assistant to link them">
+    Simply say: *"Link this task to the Website Redesign project"*
+  </Step>
+  
+  <Step title="Your assistant handles the rest">
+    Hyperaide automatically creates and maintains the relationships
+  </Step>
+</Steps>
+
+### Common Linking Patterns
+
+<AccordionGroup>
+  <Accordion title="Tasks → Projects">
+    Link tasks to projects to organize work and track progress by project
+  </Accordion>
+  
+  <Accordion title="Tasks → Contacts">
+    Link tasks to people to remember who you need to follow up with
+  </Accordion>
+  
+  <Accordion title="Notes → Projects">
+    Link notes and ideas to specific projects for easy reference
+  </Accordion>
+  
+  <Accordion title="Habits → Goals">
+    Link daily habits to longer-term goals to track progress
+  </Accordion>
+</AccordionGroup>
+
+## Working with Your Databases
+
+Once your databases are set up, interact with them using natural language:
+
+<Tabs>
+  <Tab title="Creating Records">
+    ```text
+    "Add a task to review the quarterly report by Friday"
+    "Create a new project called Website Redesign"
+    "Add John Smith to my contacts with email john@example.com"
+    ```
+  </Tab>
+  
+  <Tab title="Querying Records">
+    ```text
+    "Show me all tasks due this week"
+    "What projects do I have in progress?"
+    "Find all contacts in San Francisco"
+    ```
+  </Tab>
+  
+  <Tab title="Updating Records">
+    ```text
+    "Mark the design review task as complete"
+    "Change the meeting time to 3pm"
+    "Update the priority of the budget review to high"
+    ```
+  </Tab>
+  
+  <Tab title="Bulk Operations">
+    ```text
+    "Mark all Q1 tasks as complete"
+    "Archive all projects from last year"
+    "Delete all contacts with no email address"
+    ```
+  </Tab>
+</Tabs>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Start Simple" icon="seedling">
+    Begin with basic databases and add complexity as needed. You can always add fields later.
+  </Card>
+  
+  <Card title="Descriptive Names" icon="tag">
+    Use clear field and database names. "Due Date" is better than "Date" or "Date1".
+  </Card>
+  
+  <Card title="Rich Descriptions" icon="book">
+    Write detailed descriptions for databases and fields. This helps your assistant understand your data better.
+  </Card>
+  
+  <Card title="Link Strategically" icon="link">
+    Connect related databases to create a knowledge graph of your life and work.
+  </Card>
+</CardGroup>
+
+## Examples
+
+Here are some common database setups to inspire you:
+
+<AccordionGroup>
+  <Accordion title="Task Management System" icon="list-check">
+    **Tasks Database**: name (text), description (text), due_date (date), priority (text), completed (boolean)
+    
+    **Projects Database**: name (text), description (text), status (text), start_date (date)
+    
+    Link tasks to projects for full project management capabilities.
+  </Accordion>
+  
+  <Accordion title="Personal CRM" icon="users">
+    **Contacts Database**: name (text), email (text), phone (text), relationship (text), notes (text)
+    
+    **Interactions Database**: date (date), type (text), notes (text)
+    
+    Link interactions to contacts to maintain relationship history.
+  </Accordion>
+  
+  <Accordion title="Knowledge Management" icon="brain">
+    **Notes Database**: title (text), content (text), category (text), created_date (date)
+    
+    **Topics Database**: name (text), description (text)
+    
+    Link notes to topics for organized knowledge capture.
+  </Accordion>
+  
+  <Accordion title="Habit Tracker" icon="chart-line">
+    **Habits Database**: name (text), description (text), frequency (text), target_value (number)
+    
+    **Entries Database**: date (date), value (number), notes (text), completed (boolean)
+    
+    Link entries to habits to track progress over time.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Remember: There's no "right" way to structure your databases. Create what makes sense for your workflow and adjust as you learn what works best for you.
+</Note>
+
