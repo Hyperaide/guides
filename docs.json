@@ -7,6 +7,9 @@
     "light": "#60A5FA",
     "dark": "#2563EB"
   },
+  "fonts": {
+    "family": "Geist"
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
@@ -42,7 +45,8 @@
               "preferences",
               "actions",
               "templates",
-              "future-actions"
+              "future-actions",
+              "energy"
             ]
           }
         ]
